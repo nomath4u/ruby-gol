@@ -61,4 +61,8 @@ class Cell
 	def dead?
 		!world.cells.include?(self)
 	end
+
+	def alive?
+		world.cells.include?(self)
+	end
 end

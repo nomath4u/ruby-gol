@@ -66,4 +66,24 @@ describe'game of life' do
 		world.tick!
 		cell.should be_dead
 	end
+
+	it "Rule #2: Any live cell with two or three live neighbours lives on to the next genereation." do
+
+		cell = Cell.new(world)
+		new_cell = cell.spawn_at(1,0)
+		another_new_cell = cell.spawn_at(0, 1)
+		world.tick!
+		cell.should be_alive
+	end
+
+	it"Rule #3: Any live cell with more than three neighbours dies, as if by overcrowding." do
+
+		cell = Cell.new(world)
+		new_cell = cell.spawn_at(1,0)
+		another_new_cell = cell.spawn_at(0,1)
+		third_new_cell = cell.spawn_at(1,1)
+		fourth_new_cell = cell.spawn_at(-1, -1)
+		world.tick!
+		cell.should be_dead
+	end
 end
