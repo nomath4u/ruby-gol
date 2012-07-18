@@ -86,4 +86,14 @@ describe'game of life' do
 		world.tick!
 		cell.should be_dead
 	end
+
+	it"Rule #4: Any dead cel with exactly three live neighbours becomes a live cell, as if by reproduction." do
+		
+		cell = Cell.new(world)
+		new_cell = cell.spawn_at(1, 1)
+		another_new_cell = cell.spawn_at(-1, 1)
+		world.tick!
+		world.reproduceables.count.should == 15
+		world.cells.count.should == 2 
+	end		
 end

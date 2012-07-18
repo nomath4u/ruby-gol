@@ -1,9 +1,10 @@
 class World
 
-	attr_accessor :cells
+	attr_accessor :cells , :reproduceables
 	
 	def initialize
 		@cells = []
+		@reproduceables = []
 	end
 
 	def tick!

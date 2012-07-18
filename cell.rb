@@ -11,7 +11,8 @@ class Cell
 		world.cells.each do |cell|
 			#Cell to the North	
 			if self.x == cell.x && self.y == cell.y - 1
-				@neighbors << cell
+				@neighbors << cell	
+			
 			end
 			#Cell to the Northeast
 			if self.x == cell.x - 1 && self.y == cell.y - 1
