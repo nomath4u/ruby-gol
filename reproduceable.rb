@@ -1,4 +1,4 @@
-class Reproducable
+class Reproduceable
 	
 	attr_accessor :world,  :x, :y
 	def initialize(world, x=0, y=0)
@@ -9,7 +9,7 @@ class Reproducable
 	end
 
 	
-	def spawn_at(x,y)
+	def self.spawn_at(world, x, y)
 		 Reproduceable.new(world, x, y)
 	end
 end
