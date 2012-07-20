@@ -9,13 +9,15 @@ class World
 
 	def tick!
 		cells.each do |cell|
+			count = cell.neighbor.count
+			
 			cell.add_reproduceable			
 
-			if cell.neighbor.count < 2  #Rule 1
+			if count < 2  #Rule 1
 				cell.die!
 			end
 		
-			if cell.neighbor.count > 3 # Rule 3
+			if count > 3 # Rule 3
 				cell.die!
 			end
 		end
