@@ -1,7 +1,7 @@
 require 'rspec'
 require_relative 'cell'
 require_relative 'world'
-
+require_relative 'reproduceable'
 describe'game of life' do
 	let(:world){World.new}
 	context "cell methods" do
@@ -90,10 +90,12 @@ describe'game of life' do
 	it"Rule #4: Any dead cel with exactly three live neighbours becomes a live cell, as if by reproduction." do
 		
 		cell = Cell.new(world)
-		new_cell = cell.spawn_at(1, 1)
-		another_new_cell = cell.spawn_at(-1, 1)
+		new_cell = Cell.new(world, 1, 1) 
+		another_new_cell = Cell.new(world, -1 ,1)
+		world.cells.count.should == 3
+		world.reproduceables.count.should == 0
 		world.tick!
+		world.cells.count.should == 1
 		world.reproduceables.count.should == 15
-		world.cells.count.should == 2 
 	end		
 end

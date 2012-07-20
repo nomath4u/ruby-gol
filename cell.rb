@@ -1,7 +1,7 @@
 require_relative 'reproduceable'
 
 class Cell
-	attr_accessor :world,  :x, :y
+	attr_accessor :world,  :x, :y, :full_neighbor_north
 	def initialize(world, x=0, y=0)
 		@x = x
 		@y = y
@@ -13,13 +13,14 @@ class Cell
 		world.cells.each do |cell|
 			#Cell to the North	
 			if ((self.x == cell.x) && (self.y == cell.y - 1))
-				@neighbors << cell	
-			else
-				reproduceable = Reproduceable.spawn_at(world, self.x, self.y + 1)
+				@neighbors << cell
+				@full_neighbor_north = true	
+
 			end
 			#Cell to the Northeast
 			if self.x == cell.x - 1 && self.y == cell.y - 1
 				@neighbors << cell
+
 			end
 
 			#Cell to the East
@@ -54,6 +55,14 @@ class Cell
 		end	
 		@neighbors
 	end
+
+	def add_reproduceable
+		if(!full_neighbor_north)
+			Reproduceable.new(world, self.x, (self.y + 1))
+			@full_neighbor_north = true
+		end
+	end
+
 	def spawn_at(x,y)
 		 Cell.new(world, x, y)
 	end
