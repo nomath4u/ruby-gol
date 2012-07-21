@@ -1,4 +1,5 @@
 require_relative 'reproduceable'
+require_relative 'world'
 
 class Cell
 	attr_accessor :world,  :x, :y, :full_neighbor_north
@@ -6,8 +7,9 @@ class Cell
 	attr_accessor :full_neighbor_southeast, :full_neighbor_south
 	attr_accessor :full_neighbor_southwest, :full_neighbor_west
 	attr_accessor :full_neighbor_northwest
+	attr_accessor :protected
 
-	def initialize(world, x=0, y=0)
+	def initialize(world, x=0, y=0, protected)
 		@x = x
 		@y = y
 		@world =world
@@ -19,7 +21,16 @@ class Cell
 		@full_neighbor_southwest = false
 		@full_neighbor_west = false
 		@full_neighbor_northwest = false
-		world.cells << self
+		@protected = protected
+	
+		#Only add cells to world as a cell if not protected
+		if(@protected == false)
+			world.cells << self
+		
+		#Add cell as protected cell
+		elsif(@protected == true)
+			world.protected_cells << self
+		end
 		
 	end
 
@@ -74,9 +85,9 @@ class Cell
 				@full_neighbor_northwest = true
 			end
 		end
-
 			
 		world.reproduceables.each do |reproduceable|
+
 			#Reproduceable to the North	
 			if ((self.x == reproduceable.x) && (self.y == reproduceable.y - 1))
 				@full_neighbor_north = true	
@@ -116,8 +127,8 @@ class Cell
 			if self.x == reproduceable.x + 1 && self.y == reproduceable.y - 1
 				@full_neighbor_northwest = true
 			end
-		end	
-		@neighbors
+		end
+		@neighbors	
 	end
 
 	def add_reproduceable
@@ -168,10 +179,11 @@ class Cell
 			Reproduceable.spawn_at(world,(self.x - 1),(self.y + 1))
 			@full_neighbor_northwest = true
 		end
+		
 	end
 
 	def spawn_at(x,y)
-		 Cell.new(world, x, y)
+		 Cell.new(world, x, y, true)
 	end
 
 	def die!

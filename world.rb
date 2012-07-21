@@ -1,31 +1,50 @@
 class World
 
-	attr_accessor :cells , :reproduceables
+	attr_accessor :cells , :reproduceables, :protected_cells
 	
 	def initialize
 		@cells = []
 		@reproduceables = []
+		@protected_cells = []
 	end
 
 	def tick!
+		#Add reproduceables around each cell and set cell neighbor counts for each cell
 		cells.each do |cell|
-			count = cell.neighbor.count
-			
+			neighbor_cell_count  = cell.neighbor.count
 			cell.add_reproduceable			
+		end
 
-			if count < 2  #Rule 1
+		#Spawn Cells
+		reproduceables.each do |reproduceable|
+			#Spawn protected so that they don't count as a neighbor or get killed until the next tick!
+			if (reproduceable.cell_neighbor.count  == 3) #Rule 4
+				spawn_cell(reproduceable.x, reproduceable.y, true)
+			end
+			@reproduceables -= [reproduceable] #Remove the reproduceable after being evaluated
+		end
+
+		#Kill off cells
+		cells.each do |cell|
+			
+			if ((cell.neighbor.count < 2) && (cell.protected == false))  #Rule 1
 				cell.die!
 			end
 		
-			if count > 3 # Rule 3
+			if ((cell.neighbor.count > 3) && (cell.protected == false)) # Rule 3
 				cell.die!
 			end
 		end
+
+		#Unprotect all protected_cells
+		protected_cells.each do |protectedcell|
+			
+			@cells << protectedcell
+			@protected_cells -= [protectedcell]
+		end
 	end
 
-	
-		
-
-	
-	
+	def spawn_cell(x , y, protected)
+		Cell.new(self, x , y, protected)
+	end
 end
