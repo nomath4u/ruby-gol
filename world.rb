@@ -45,6 +45,6 @@ class World
 	end
 
 	def spawn_cell(x , y, safe)
-		Cell.new(self, x , y, safe)
+		Organism.new(self, x , y, safe)
 	end
 end

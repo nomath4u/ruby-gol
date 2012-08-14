@@ -20,14 +20,20 @@ class ViewController
     end
     
     def tick(sender)
-        @world.tick!
-        @cells = world.cells
-        textField.setStringValue(@cells)
+        world.tick!
+        cells = world.cells.count
+        textField.setStringValue(cells)
         
         
     end
     
     def create(sender)
-        Organism.new(world,0,0,false)
+        Organism.new(@world,0,0,false)
+        Organism.new(@world,0,1,false)
+        Organism.new(@world,0,2,false)
+        #Organism.new(@world,0,3,false)
+        #Organism.new(@world,1,0,false)
+        #Organism.new(@world,2,0,false)
+        #Organism.new(@world,3,0,false)
     end
 end

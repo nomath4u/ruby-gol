@@ -187,7 +187,7 @@ class Organism
 	end
 
 	def die!
-	world.cells -= [self]
+        world.cells -= [self]
 	end
 
 	def dead?
