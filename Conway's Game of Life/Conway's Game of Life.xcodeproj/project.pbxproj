@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
+		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
+		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
+		834F02DD15CB141C00082B8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F02DC15CB141C00082B8F /* main.m */; };
+		834F02E215CB141C00082B8F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 834F02E015CB141C00082B8F /* MainMenu.xib */; };
+		834F02E515CB141C00082B8F /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02E415CB141C00082B8F /* rb_main.rb */; };
+		834F02E715CB141C00082B8F /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02E615CB141C00082B8F /* AppDelegate.rb */; };
+		834F02F715CB146400082B8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F215CB146400082B8F /* README.md */; };
+		834F02F815CB146400082B8F /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F315CB146400082B8F /* reproduceable.rb */; };
+		834F02F915CB146400082B8F /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F415CB146400082B8F /* world.rb */; };
+		834F02FF15CB23A800082B8F /* view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02FE15CB23A800082B8F /* view_controller.rb */; };
+		836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */ = {isa = PBXBuildFile; fileRef = 836F0DBA15CC5A7F003ECB1B /* organism.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		834F02D415CB141C00082B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834F02C215CB141C00082B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834F02CA15CB141C00082B8F;
+			remoteInfo = "Conway's Game of Life";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		834F02D815CB141C00082B8F /* Conway's Game of Life-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Conway's Game of Life-Info.plist"; sourceTree = "<group>"; };
+		834F02DA15CB141C00082B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		834F02DC15CB141C00082B8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		834F02DE15CB141C00082B8F /* Conway's Game of Life-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conway's Game of Life-Prefix.pch"; sourceTree = "<group>"; };
+		834F02E115CB141C00082B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		834F02E415CB141C00082B8F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		834F02E615CB141C00082B8F /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		834F02F215CB146400082B8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		834F02F315CB146400082B8F /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = reproduceable.rb; path = ../../reproduceable.rb; sourceTree = "<group>"; };
+		834F02F415CB146400082B8F /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = world.rb; path = ../../world.rb; sourceTree = "<group>"; };
+		834F02FE15CB23A800082B8F /* view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = view_controller.rb; sourceTree = "<group>"; };
+		836F0DBA15CC5A7F003ECB1B /* organism.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = organism.rb; path = ../organism.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		834F02C815CB141C00082B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */,
+				834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		834F02C015CB141C00082B8F = {
+			isa = PBXGroup;
+			children = (
+				836F0DBA15CC5A7F003ECB1B /* organism.rb */,
+				834F02D615CB141C00082B8F /* Conway's Game of Life */,
+				834F02CE15CB141C00082B8F /* Frameworks */,
+				834F02CC15CB141C00082B8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		834F02CC15CB141C00082B8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				834F02CB15CB141C00082B8F /* Conway's Game of Life.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		834F02CE15CB141C00082B8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				834F02CF15CB141C00082B8F /* Cocoa.framework */,
+				834F02D115CB141C00082B8F /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		834F02D615CB141C00082B8F /* Conway's Game of Life */ = {
+			isa = PBXGroup;
+			children = (
+				834F02F315CB146400082B8F /* reproduceable.rb */,
+				834F02F415CB146400082B8F /* world.rb */,
+				834F02FE15CB23A800082B8F /* view_controller.rb */,
+				834F02E615CB141C00082B8F /* AppDelegate.rb */,
+				834F02DF15CB141C00082B8F /* Resources */,
+				834F02E315CB141C00082B8F /* Other Sources */,
+				834F02D715CB141C00082B8F /* Supporting Files */,
+			);
+			path = "Conway's Game of Life";
+			sourceTree = "<group>";
+		};
+		834F02D715CB141C00082B8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				834F02D815CB141C00082B8F /* Conway's Game of Life-Info.plist */,
+				834F02D915CB141C00082B8F /* InfoPlist.strings */,
+				834F02DC15CB141C00082B8F /* main.m */,
+				834F02DE15CB141C00082B8F /* Conway's Game of Life-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		834F02DF15CB141C00082B8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				834F02F215CB146400082B8F /* README.md */,
+				834F02E015CB141C00082B8F /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		834F02E315CB141C00082B8F /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				834F02E415CB141C00082B8F /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		834F02D315CB141C00082B8F /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 834F02ED15CB141C00082B8F /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				834F02D515CB141C00082B8F /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		834F02CA15CB141C00082B8F /* Conway's Game of Life */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conway's Game of Life" */;
+			buildPhases = (
+				834F02C715CB141C00082B8F /* Sources */,
+				834F02C815CB141C00082B8F /* Frameworks */,
+				834F02C915CB141C00082B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Conway's Game of Life";
+			productName = "Conway's Game of Life";
+			productReference = 834F02CB15CB141C00082B8F /* Conway's Game of Life.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		834F02C215CB141C00082B8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Christopher Harper";
+			};
+			buildConfigurationList = 834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conway's Game of Life" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 834F02C015CB141C00082B8F;
+			productRefGroup = 834F02CC15CB141C00082B8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				834F02CA15CB141C00082B8F /* Conway's Game of Life */,
+				834F02D315CB141C00082B8F /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		834F02C915CB141C00082B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */,
+				834F02E215CB141C00082B8F /* MainMenu.xib in Resources */,
+				834F02E515CB141C00082B8F /* rb_main.rb in Resources */,
+				834F02E715CB141C00082B8F /* AppDelegate.rb in Resources */,
+				834F02F715CB146400082B8F /* README.md in Resources */,
+				834F02F815CB146400082B8F /* reproduceable.rb in Resources */,
+				834F02F915CB146400082B8F /* world.rb in Resources */,
+				834F02FF15CB23A800082B8F /* view_controller.rb in Resources */,
+				836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		834F02C715CB141C00082B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834F02DD15CB141C00082B8F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		834F02D515CB141C00082B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834F02CA15CB141C00082B8F /* Conway's Game of Life */;
+			targetProxy = 834F02D415CB141C00082B8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		834F02D915CB141C00082B8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834F02DA15CB141C00082B8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		834F02E015CB141C00082B8F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834F02E115CB141C00082B8F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		834F02E815CB141C00082B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		834F02E915CB141C00082B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		834F02EB15CB141C00082B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Conway's Game of Life/Conway's Game of Life-Prefix.pch";
+				INFOPLIST_FILE = "Conway's Game of Life/Conway's Game of Life-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		834F02EC15CB141C00082B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Conway's Game of Life/Conway's Game of Life-Prefix.pch";
+				INFOPLIST_FILE = "Conway's Game of Life/Conway's Game of Life-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		834F02EE15CB141C00082B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		834F02EF15CB141C00082B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conway's Game of Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834F02E815CB141C00082B8F /* Debug */,
+				834F02E915CB141C00082B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conway's Game of Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834F02EB15CB141C00082B8F /* Debug */,
+				834F02EC15CB141C00082B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834F02ED15CB141C00082B8F /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834F02EE15CB141C00082B8F /* Debug */,
+				834F02EF15CB141C00082B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 834F02C215CB141C00082B8F /* Project object */;
+}

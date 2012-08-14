@@ -96,7 +96,7 @@ describe'game of life' do
 		world.reproduceables.count.should == 0
 		world.tick!
 		world.reproduceables.count.should == 0
-		world.protected_cells.count.should == 0
+		world.safe_cells.count.should == 0
 		world.cells.count.should == 2 #2 should die and one should spawn
 	end
 end

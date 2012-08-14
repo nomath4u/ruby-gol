@@ -1,11 +1,11 @@
 class World
 
-	attr_accessor :cells , :reproduceables, :protected_cells
+	attr_accessor :cells , :reproduceables, :safe_cells
 	
 	def initialize
 		@cells = []
 		@reproduceables = []
-		@protected_cells = []
+		@safe_cells = []
 	end
 
 	def tick!
@@ -27,24 +27,24 @@ class World
 		#Kill off cells
 		cells.each do |cell|
 			
-			if ((cell.neighbor.count < 2) && (cell.protected == false))  #Rule 1
+			if ((cell.neighbor.count < 2) && (cell.safe == false))  #Rule 1
 				cell.die!
 			end
 		
-			if ((cell.neighbor.count > 3) && (cell.protected == false)) # Rule 3
+			if ((cell.neighbor.count > 3) && (cell.safe == false)) # Rule 3
 				cell.die!
 			end
 		end
 
 		#Unprotect all protected_cells
-		protected_cells.each do |protectedcell|
+		safe_cells.each do |protectedcell|
 			
 			@cells << protectedcell
-			@protected_cells -= [protectedcell]
+			@safe_cells -= [protectedcell]
 		end
 	end
 
-	def spawn_cell(x , y, protected)
-		Cell.new(self, x , y, protected)
+	def spawn_cell(x , y, safe)
+		Cell.new(self, x , y, safe)
 	end
 end
