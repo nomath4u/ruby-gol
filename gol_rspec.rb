@@ -99,4 +99,24 @@ describe'game of life' do
 		world.safe_cells.count.should == 0
 		world.cells.count.should == 2 #2 should die and one should spawn
 	end
+
+	it"Large scale test" do
+
+		cell = Organism.new(world,false)
+		new_cell = Organism.new(world, 1, 0, false)
+		another_new_cell = Organism.new(world, 0, 1, false)
+		fourth_new_cell = Organism.new(world, 1, 1, false)
+		fifth_new_cell = Organism.new(world, 1, 2, false)
+		world.tick!
+		world.cells.count.should == 5
+		world.safe_cells.count.should == 0
+		world.tick!
+		world.reproduceables.count.should == 0
+		world.safe_cells.count.should == 0
+		world.cells.count.should == 3
+		world.tick!
+		world.cells.count.should == 2
+		world.tick!
+		world.cells.count.should == 0
+	end
 end
