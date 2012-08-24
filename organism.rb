@@ -8,6 +8,7 @@ class Organism
 	attr_accessor :full_neighbor_southwest, :full_neighbor_west
 	attr_accessor :full_neighbor_northwest
 	attr_accessor :safe
+    attr_accessor :neighbors
 
 	def initialize(world, x=0, y=0, safe)
 		@x = x
@@ -22,6 +23,7 @@ class Organism
 		@full_neighbor_west = false
 		@full_neighbor_northwest = false
 		@safe = safe
+	        @neighbors = []
 	
 		#Only add cells to world as a cell if not protected
 		if(@safe == false)
@@ -31,11 +33,12 @@ class Organism
 		elsif(@safe == true)
 			world.safe_cells << self
 		end
+        
+        self.neighbor
 		
 	end
 
 	def neighbor
-		@neighbors = []
 		world.cells.each do |cell|
 			#Cell to the North	
 			if ((self.x == cell.x) && (self.y == cell.y - 1))

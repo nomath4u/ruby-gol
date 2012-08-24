@@ -62,7 +62,8 @@ describe'game of life' do
 	it " Rule #1: Any live cell with fewer than two live neighbours dies, as if caused by under-population." do
 	
 		cell = Organism.new(world, false)
-		new_cell = cell.spawn_at(2,0)
+		new_cell = Organism.new(world,1,0,false)
+		cell.neighbors.count.should == 1
 		world.tick!
 		cell.should be_dead
 	end
@@ -74,6 +75,8 @@ describe'game of life' do
 		another_new_cell = Organism.new(world,0, 1,false)
 		world.tick!
 		cell.should be_alive
+		new_cell.should be_alive
+		another_new_cell.shoul be_alive
 	end
 
 	it"Rule #3: Any live cell with more than three neighbours dies, as if by overcrowding." do
@@ -85,6 +88,10 @@ describe'game of life' do
 		fourth_new_cell = Organism.new(world,-1, -1,false)
 		world.tick!
 		cell.should be_dead
+		fourth_new_cell.shoul be_dead
+		new_cell.should be_alive
+		another_new_cell.shoul be_alive
+		third_new_cell.shoul be_alive
 	end
 
 	it"Rule #4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction." do

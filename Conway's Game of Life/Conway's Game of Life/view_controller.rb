@@ -15,7 +15,7 @@ class ViewController
     attr_accessor :text
     attr_accessor :table
     attr_accessor :world
-    attr_accessor :cells
+    attr_accessor :organisms
     attr_accessor :textField
     attr_accessor :buttonColor
     attr_accessor :teststring
@@ -26,15 +26,15 @@ class ViewController
         @world = World.new
         @teststring = 'bergdy'
         @timesPressed = 0
+        @organisms = @world.cells
         
         
         
     end
     
     def tick(sender)
-        world.tick!
-        @cells = world.cells
-        textField.setStringValue(cells.count)
+        @world.tick!
+        @organisms = @world.cells
         
         #Update the Table
         @tableView.reloadData
@@ -43,13 +43,18 @@ class ViewController
     end
     
     def create(sender)
-        Organism.new(@world,0,0,false)
-        Organism.new(@world,0,1,false)
-        Organism.new(@world,0,2,false)
+        
+        #Create test organisms
+        Organism.new(@world,1,1,false)
+        Organism.new(@world,1,2,false)
+        Organism.new(@world,1,3,false)
         #Organism.new(@world,-1,0,false)
         #Organism.new(@world,-1,1,false)
         #Organism.new(@world,2,0,false)
         #Organism.new(@world,3,0,false)
+        
+        #Catch the view controller up
+        @organisms = @world.cells
         
         #Display Created Cells without !tick
         @tableView.reloadData
@@ -74,20 +79,20 @@ class ViewController
     end
     
     def tableView(tableView, objectValueForTableColumn:column, row:row)
-        if(column.identifier == "0" && row == @timesPressed)
-            '0'
-        
-        else
-            @teststring
-        end
+        #Empty text in the cells
     end
     
     def tableView(tableView, willDisplayCell:cell, forTableColumn:column, row:row)
         cell.setDrawsBackground true
-        if(column.identifier == "0" && row == @timesPressed)
-            cell.setBackgroundColor NSColor.redColor
-        else
-            cell.setBackgroundColor NSColor.whiteColor
+        alive = checkForOrganism(column, row)
+        cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
+        puts "(#{row}, #{column.identifier}) is #{alive ? 'alive' : 'dead'}"
+    end
+    
+    def checkForOrganism(column, row)
+        @organisms.detect do |organism|
+            "#{organism.x}" == column.identifier && organism.y == row
         end
     end
+            
 end
