@@ -88,11 +88,6 @@ class ViewController
         alive = checkForOrganism(column, row)
         cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
         puts "(#{column.identifier}, #{row}) is #{alive ? 'alive' : 'dead'}"
-        
-        if(cell.backgroundColor != NSColor.greenColor)
-            repo = checkForReproducable(column, row)
-            cell.setBackgroundColor(repo ? NSColor.redColor : NSColor.whiteColor)
-        end
     end
     
     def checkForOrganism(column, row)
