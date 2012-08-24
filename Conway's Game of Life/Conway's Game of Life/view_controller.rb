@@ -21,12 +21,14 @@ class ViewController
     attr_accessor :teststring
     attr_accessor :tableView
     attr_accessor :timesPressed
+    attr_accessor :reproduceables
     
     def initialize
         @world = World.new
         @teststring = 'bergdy'
         @timesPressed = 0
         @organisms = @world.cells
+        @reproduceables = @world.reproduceables
         
         
         
@@ -45,13 +47,12 @@ class ViewController
     def create(sender)
         
         #Create test organisms
-        Organism.new(@world,1,1,false)
-        Organism.new(@world,1,2,false)
-        Organism.new(@world,1,3,false)
-        #Organism.new(@world,-1,0,false)
-        #Organism.new(@world,-1,1,false)
-        #Organism.new(@world,2,0,false)
-        #Organism.new(@world,3,0,false)
+        #Organism.new(@world,1,2,false)
+        Organism.new(@world,6,10,false)
+        Organism.new(@world,6,9,false)
+        Organism.new(@world,7,10,false)
+        Organism.new(@world,7,9,false)
+        Organism.new(@world,7,8,false)
         
         #Catch the view controller up
         @organisms = @world.cells
@@ -75,7 +76,7 @@ class ViewController
     end
     
     def numberOfRowsInTableView(sender)
-        7
+        19
     end
     
     def tableView(tableView, objectValueForTableColumn:column, row:row)
@@ -86,12 +87,23 @@ class ViewController
         cell.setDrawsBackground true
         alive = checkForOrganism(column, row)
         cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
-        puts "(#{row}, #{column.identifier}) is #{alive ? 'alive' : 'dead'}"
+        puts "(#{column.identifier}, #{row}) is #{alive ? 'alive' : 'dead'}"
+        
+        if(cell.backgroundColor != NSColor.greenColor)
+            repo = checkForReproducable(column, row)
+            cell.setBackgroundColor(repo ? NSColor.redColor : NSColor.whiteColor)
+        end
     end
     
     def checkForOrganism(column, row)
         @organisms.detect do |organism|
             "#{organism.x}" == column.identifier && organism.y == row
+        end
+    end
+    
+    def checkForReproducable(column, row)
+        @reproduceables.detect do |reproduceable|
+            "#{reproduceable.x}" == column.identifier && reproduceable.y == row
         end
     end
             

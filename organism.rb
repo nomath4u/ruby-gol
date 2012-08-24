@@ -8,7 +8,7 @@ class Organism
 	attr_accessor :full_neighbor_southwest, :full_neighbor_west
 	attr_accessor :full_neighbor_northwest
 	attr_accessor :safe
-    attr_accessor :neighbors
+   	attr_accessor :neighbors
 
 	def initialize(world, x=0, y=0, safe)
 		@x = x
@@ -27,23 +27,22 @@ class Organism
 	
 		#Only add cells to world as a cell if not protected
 		if(@safe == false)
-			world.cells << self
+			@world.cells << self
 		
 		#Add cell as protected cell
 		elsif(@safe == true)
-			world.safe_cells << self
+			@world.safe_cells << self
 		end
         
-        self.neighbor
-		
 	end
 
 	def neighbor
-		world.cells.each do |cell|
+		@neighbors = []
+		@world.cells.each do |cell|
 			#Cell to the North	
 			if ((self.x == cell.x) && (self.y == cell.y - 1))
 				@neighbors << cell
-				@full_neighbor_north = true	
+				@full_neighbor_north = true
 			end
 
 			#Cell to the Northeast
@@ -131,54 +130,53 @@ class Organism
 				@full_neighbor_northwest = true
 			end
 		end
-		@neighbors	
 	end
 
 	def add_reproduceable
 		#Add Reproduceable to the north
-		if(full_neighbor_north == false)
+		if(@full_neighbor_north == false)
 			Reproduceable.spawn_at(world,self.x,(self.y + 1))
 			@full_neighbor_north = true
 		end
 
 		#Add Reproduceable to the northeast
-		if(full_neighbor_northeast == false)
+		if(@full_neighbor_northeast == false)
 			Reproduceable.spawn_at(world,(self.x + 1),(self.y + 1))
 			@full_neighbor_northeast = true
 		end
 
 		#Add Reproduceable to the east
-		if(full_neighbor_east == false)
+		if(@full_neighbor_east == false)
 			Reproduceable.spawn_at(world,(self.x + 1),self.y)
 			@full_neighbor_east = true
 		end
 
 		#Add Reproduceable to the southeast
-		if(full_neighbor_southeast == false)
+		if(@full_neighbor_southeast == false)
 			Reproduceable.spawn_at(world,(self.x + 1),(self.y - 1))
 			@full_neighbor_southeast = true
 		end
 
 		#Add Reproduceable to the south
-		if(full_neighbor_south == false)
+		if(@full_neighbor_south == false)
 			Reproduceable.spawn_at(world,self.x,(self.y - 1))
 			@full_neighbor_south = true
 		end
 
 		#Add Reproduceable to the southwest
-		if(full_neighbor_southwest == false)
+		if(@full_neighbor_southwest == false)
 			Reproduceable.spawn_at(world,(self.x - 1),(self.y - 1))
 			@full_neighbor_southwest = true
 		end
 
 		#Add Reproduceable to the west
-		if(full_neighbor_west == false)
+		if(@full_neighbor_west == false)
 			Reproduceable.spawn_at(world,(self.x - 1),self.y)
 			@full_neighbor_west = true
 		end
 
 		#Add Reproduceable to the northwest
-		if(full_neighbor_northwest == false)
+		if(@full_neighbor_northwest == false)
 			Reproduceable.spawn_at(world,(self.x - 1),(self.y + 1))
 			@full_neighbor_northwest = true
 		end

@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Conway&apos;s Game of Life/view_controller.rb"
-         timestampString = "367473738.441872"
+         timestampString = "367530068.038119"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
          landmarkName = "tick"
          landmarkType = "7">
       </FileBreakpoint>

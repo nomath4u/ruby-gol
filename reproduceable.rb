@@ -1,6 +1,7 @@
 class Reproduceable
 	
 	attr_accessor :world,  :x, :y
+    attr_accessor :neighbors
 	def initialize(world, x=0, y=0)
 		@x = x
 		@y = y
@@ -13,7 +14,7 @@ class Reproduceable
 		@neighbors = []
 		world.cells.each do |cell|
 			#Cell to the North	
-			if ((self.x == cell.x) && (self.y == cell.y - 1))
+			if self.x == cell.x && self.y == cell.y - 1
 				@neighbors << cell
 			end
 
@@ -52,7 +53,6 @@ class Reproduceable
 				@neighbors << cell
 			end
 		end
-		@neighbors
 	end
 
 	

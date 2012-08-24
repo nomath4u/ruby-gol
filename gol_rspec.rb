@@ -6,6 +6,7 @@ describe'game of life' do
 	let(:world){World.new}
 	context "cell methods" do
 		subject { Organism.new(world, 0, 0, false) }
+=begin
 		it "spawn relative to" do
 			cell = subject.spawn_at(5,5)
 			cell.is_a?(Organism).should be_true
@@ -16,44 +17,44 @@ describe'game of life' do
 
 		it "detects north neighbor" do
 			cell = Organism.new(world,0,1,false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 
 		it "detects north east neighbor" do
 			cell = Organism.new(world,1,1, false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 		
 		it "detects east neighbor" do
 			cell = Organism.new(world,1,0,false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 
 		it "detects southeast neighbor" do
 			cell = Organism.new(world,1,-1, false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 
 		it "detects south neighbor" do
 			cell = Organism.new(world,0,-1,false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 
 		it "detects southwest neighbor" do
 			cell = Organism.new(world,-1,-1, false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 	
 		it "detects west neighbor" do
 			cell = Organism.new(world,-1,0, false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
 
 		it "detects northwest neightbor" do
 			cell = Organism.new(world,-1,1,false)
-			subject.neighbor.count.should == 1
+			subject.neighbors.count.should == 1
 		end
-
+=end
 		it "dies" do
 			subject.die!
 			subject.world.cells.should_not include(subject)
@@ -63,7 +64,6 @@ describe'game of life' do
 	
 		cell = Organism.new(world, false)
 		new_cell = Organism.new(world,1,0,false)
-		cell.neighbors.count.should == 1
 		world.tick!
 		cell.should be_dead
 	end
@@ -76,7 +76,7 @@ describe'game of life' do
 		world.tick!
 		cell.should be_alive
 		new_cell.should be_alive
-		another_new_cell.shoul be_alive
+		another_new_cell.should be_alive
 	end
 
 	it"Rule #3: Any live cell with more than three neighbours dies, as if by overcrowding." do
@@ -88,10 +88,10 @@ describe'game of life' do
 		fourth_new_cell = Organism.new(world,-1, -1,false)
 		world.tick!
 		cell.should be_dead
-		fourth_new_cell.shoul be_dead
+		fourth_new_cell.should be_dead
 		new_cell.should be_alive
-		another_new_cell.shoul be_alive
-		third_new_cell.shoul be_alive
+		another_new_cell.should be_alive
+		third_new_cell.should be_alive
 	end
 
 	it"Rule #4: Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction." do

@@ -17,7 +17,7 @@ class AppDelegate
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
         index = 0
-        @numberOfColumns = 5
+        @numberOfColumns = 11
         #Lock Some TableView functions
         @tableView.setAllowsColumnReordering false
         @tableView.setAllowsColumnSelection false
