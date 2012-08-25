@@ -16,16 +16,11 @@ class ViewController
     attr_accessor :table
     attr_accessor :world
     attr_accessor :organisms
-    attr_accessor :textField
-    attr_accessor :teststring
     attr_accessor :tableView
-    attr_accessor :timesPressed
     attr_accessor :reproduceables
     
     def initialize
         @world = World.new
-        @teststring = 'bergdy'
-        @timesPressed = 0
         @organisms = @world.cells
         @reproduceables = @world.reproduceables
         
@@ -35,7 +30,7 @@ class ViewController
     
     def awakeFromNib
         index = 0
-        @numberOfColumns = 11
+        @numberOfColumns = 52
         #Lock Some TableView functions
         @tableView.setAllowsColumnReordering false
         @tableView.setAllowsColumnSelection false
@@ -51,6 +46,7 @@ class ViewController
         @numberOfColumns.times do |c|
             col = NSTableColumn.new().initWithIdentifier("#{c}")
             col.setEditable false
+            col.setWidth 16.0
             col.setDataCell button_cell
             @tableView.addTableColumn(col)
         end
@@ -65,6 +61,26 @@ class ViewController
         
         
     end
+    
+    def startTimer(sender)
+        if @timer.nil?
+            @time = 0.0
+            @timer = NSTimer
+            .scheduledTimerWithTimeInterval(2.0,
+                                            target: self,
+                                            selector: "tick:",
+                                            userInfo: nil,
+                                            repeats: true)
+        end
+    end
+    
+    def stopTimer(sender)
+        if @timer
+            @timer.invalidate
+            @timer = nil
+        end
+    end
+        
     
     def spawn(sender)
         
@@ -87,19 +103,8 @@ class ViewController
     #Table View
     end
     
-    def additionalColumn(sender)
-        @timesPressed += 1
-        
-        if(@timesPressed > 6)
-            @timesPressed = 0
-        end
-        
-       @tableView.reloadData
-        
-    end
-    
     def numberOfRowsInTableView(sender)
-        19
+       43
     end
     
     def tableView(tableView, objectValueForTableColumn:column, row:row)
@@ -112,13 +117,18 @@ class ViewController
         cell.row = row
         alive = checkForOrganism(column, row)
         cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
-        puts "(#{column.identifier}, #{row}) is #{alive ? 'alive' : 'dead'}"
     end
     
     def checkForOrganism(column, row)
         @organisms.detect do |organism|
             "#{organism.x}" == column.identifier && organism.y == row
         end
+    end
+    
+    def clearBoard(sender)
+        @organisms.each {|organism| organism.die!}
+        @organisms = world.cells
+        @tableView.reloadData
     end
             
 end
