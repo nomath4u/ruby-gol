@@ -8,16 +8,15 @@
 
 require 'organism'
 require '~/Documents/Game_of_life/world'
+require 'NSCellWithCoordinates'
 
 class ViewController
     
     attr_accessor :window
-    attr_accessor :text
     attr_accessor :table
     attr_accessor :world
     attr_accessor :organisms
     attr_accessor :textField
-    attr_accessor :buttonColor
     attr_accessor :teststring
     attr_accessor :tableView
     attr_accessor :timesPressed
@@ -34,6 +33,29 @@ class ViewController
         
     end
     
+    def awakeFromNib
+        index = 0
+        @numberOfColumns = 11
+        #Lock Some TableView functions
+        @tableView.setAllowsColumnReordering false
+        @tableView.setAllowsColumnSelection false
+        @tableView.setSelectionHighlightStyle NSTableViewSelectionHighlightStyleNone
+        
+        
+        #Create Columns
+        
+        button_cell = NSCellWithCoordinates.new
+        button_cell.setTarget self
+        button_cell.setAction "spawn:"
+        button_cell.setTitle ''
+        @numberOfColumns.times do |c|
+            col = NSTableColumn.new().initWithIdentifier("#{c}")
+            col.setEditable false
+            col.setDataCell button_cell
+            @tableView.addTableColumn(col)
+        end
+    end
+    
     def tick(sender)
         @world.tick!
         @organisms = @world.cells
@@ -44,10 +66,15 @@ class ViewController
         
     end
     
+    def spawn(sender)
+        
+        Organism.new(@world, sender.clickedColumn, sender.clickedRow, false)
+        @tableView.reloadData
+    end
+    
     def create(sender)
         
         #Create test organisms
-        #Organism.new(@world,1,2,false)
         Organism.new(@world,6,10,false)
         Organism.new(@world,6,9,false)
         Organism.new(@world,7,10,false)
@@ -56,13 +83,9 @@ class ViewController
         
         #Catch the view controller up
         @organisms = @world.cells
-        
-        #Display Created Cells without !tick
-        @tableView.reloadData
-    end
-    
     
     #Table View
+    end
     
     def additionalColumn(sender)
         @timesPressed += 1
@@ -85,6 +108,8 @@ class ViewController
     
     def tableView(tableView, willDisplayCell:cell, forTableColumn:column, row:row)
         cell.setDrawsBackground true
+        cell.column = column
+        cell.row = row
         alive = checkForOrganism(column, row)
         cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
         puts "(#{column.identifier}, #{row}) is #{alive ? 'alive' : 'dead'}"
@@ -93,12 +118,6 @@ class ViewController
     def checkForOrganism(column, row)
         @organisms.detect do |organism|
             "#{organism.x}" == column.identifier && organism.y == row
-        end
-    end
-    
-    def checkForReproducable(column, row)
-        @reproduceables.detect do |reproduceable|
-            "#{reproduceable.x}" == column.identifier && reproduceable.y == row
         end
     end
             

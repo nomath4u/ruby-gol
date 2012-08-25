@@ -18,6 +18,7 @@
 		834F02F815CB146400082B8F /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F315CB146400082B8F /* reproduceable.rb */; };
 		834F02F915CB146400082B8F /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F415CB146400082B8F /* world.rb */; };
 		834F02FF15CB23A800082B8F /* view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02FE15CB23A800082B8F /* view_controller.rb */; };
+		8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */; };
 		836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */ = {isa = PBXBuildFile; fileRef = 836F0DBA15CC5A7F003ECB1B /* organism.rb */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		834F02F315CB146400082B8F /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = reproduceable.rb; path = ../../reproduceable.rb; sourceTree = "<group>"; };
 		834F02F415CB146400082B8F /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = world.rb; path = ../../world.rb; sourceTree = "<group>"; };
 		834F02FE15CB23A800082B8F /* view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = view_controller.rb; sourceTree = "<group>"; };
+		8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSCellWithCoordinates.rb; sourceTree = "<group>"; };
 		836F0DBA15CC5A7F003ECB1B /* organism.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = organism.rb; path = ../organism.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				834F02F315CB146400082B8F /* reproduceable.rb */,
 				834F02F415CB146400082B8F /* world.rb */,
 				834F02FE15CB23A800082B8F /* view_controller.rb */,
+				8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */,
 				834F02E615CB141C00082B8F /* AppDelegate.rb */,
 				834F02DF15CB141C00082B8F /* Resources */,
 				834F02E315CB141C00082B8F /* Other Sources */,
@@ -209,6 +212,7 @@
 				834F02F915CB146400082B8F /* world.rb in Resources */,
 				834F02FF15CB23A800082B8F /* view_controller.rb in Resources */,
 				836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */,
+				8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
