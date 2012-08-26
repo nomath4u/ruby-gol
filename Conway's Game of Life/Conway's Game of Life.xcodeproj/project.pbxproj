@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8348FB7F15EAAA29005AF833 /* AboutViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB7E15EAAA29005AF833 /* AboutViewController.rb */; };
+		8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8115EAAD66005AF833 /* Credits.rtf */; };
 		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
 		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
 		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8348FB7E15EAAA29005AF833 /* AboutViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AboutViewController.rb; sourceTree = "<group>"; };
+		8348FB8115EAAD66005AF833 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -94,6 +98,7 @@
 		834F02D615CB141C00082B8F /* Conway's Game of Life */ = {
 			isa = PBXGroup;
 			children = (
+				8348FB7E15EAAA29005AF833 /* AboutViewController.rb */,
 				834F02F315CB146400082B8F /* reproduceable.rb */,
 				834F02F415CB146400082B8F /* world.rb */,
 				834F02FE15CB23A800082B8F /* view_controller.rb */,
@@ -122,6 +127,7 @@
 			children = (
 				834F02F215CB146400082B8F /* README.md */,
 				834F02E015CB141C00082B8F /* MainMenu.xib */,
+				8348FB8115EAAD66005AF833 /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 				834F02FF15CB23A800082B8F /* view_controller.rb in Resources */,
 				836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */,
 				8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */,
+				8348FB7F15EAAA29005AF833 /* AboutViewController.rb in Resources */,
+				8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

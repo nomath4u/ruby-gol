@@ -18,6 +18,7 @@ class ViewController
     attr_accessor :organisms
     attr_accessor :tableView
     attr_accessor :reproduceables
+    attr_accessor :start_button, :stop_button
     
     def initialize
         @world = World.new
@@ -56,6 +57,13 @@ class ViewController
         @world.tick!
         @organisms = @world.cells
         
+        #End timer if no cells
+        if(@organisms.count == 0)
+            @timer.invalidate
+            @start_button.setEnabled true
+            @stop_button.setEnabled false
+        end
+        
         #Update the Table
         @tableView.reloadData
         
@@ -64,9 +72,11 @@ class ViewController
     
     def startTimer(sender)
         if @timer.nil?
+            @start_button.setEnabled false
+            @stop_button.setEnabled true
             @time = 0.0
             @timer = NSTimer
-            .scheduledTimerWithTimeInterval(2.0,
+            .scheduledTimerWithTimeInterval(1.0,
                                             target: self,
                                             selector: "tick:",
                                             userInfo: nil,
@@ -76,6 +86,8 @@ class ViewController
     
     def stopTimer(sender)
         if @timer
+            @start_button.setEnabled true
+            @stop_button.setEnabled false
             @timer.invalidate
             @timer = nil
         end
@@ -88,20 +100,6 @@ class ViewController
         @tableView.reloadData
     end
     
-    def create(sender)
-        
-        #Create test organisms
-        Organism.new(@world,6,10,false)
-        Organism.new(@world,6,9,false)
-        Organism.new(@world,7,10,false)
-        Organism.new(@world,7,9,false)
-        Organism.new(@world,7,8,false)
-        
-        #Catch the view controller up
-        @organisms = @world.cells
-    
-    #Table View
-    end
     
     def numberOfRowsInTableView(sender)
        43
