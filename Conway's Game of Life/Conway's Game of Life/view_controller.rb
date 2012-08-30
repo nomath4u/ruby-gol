@@ -141,7 +141,7 @@ class ViewController
     end
     
     def stencile(sender)
-        @template = Template.new
+        @template = Template.new(sender)
         @template_selected = true
         #@world.stencile(template)
         #@tableView.reloadData

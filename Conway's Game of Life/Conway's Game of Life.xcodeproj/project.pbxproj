@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8115EAAD66005AF833 /* Credits.rtf */; };
-		8348FB8515EC84B2005AF833 /* blinker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8415EC84B2005AF833 /* blinker.json */; };
+		8348FB8515EC84B2005AF833 /* Blinker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8415EC84B2005AF833 /* Blinker.json */; };
 		8348FB8715EC86C8005AF833 /* template.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8615EC86C8005AF833 /* template.rb */; };
 		8348FB8915EC960E005AF833 /* coordinate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8815EC960E005AF833 /* coordinate.rb */; };
 		8348FB8D15EC9BF3005AF833 /* organism.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8A15EC9BF3005AF833 /* organism.rb */; };
 		8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8B15EC9BF3005AF833 /* reproduceable.rb */; };
 		8348FB8F15EC9BF3005AF833 /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8C15EC9BF3005AF833 /* world.rb */; };
+		8348FB9115EF602E005AF833 /* Plus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9015EF602E005AF833 /* Plus.json */; };
 		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
 		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
 		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
@@ -38,12 +39,13 @@
 
 /* Begin PBXFileReference section */
 		8348FB8115EAAD66005AF833 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		8348FB8415EC84B2005AF833 /* blinker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blinker.json; sourceTree = "<group>"; };
+		8348FB8415EC84B2005AF833 /* Blinker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Blinker.json; sourceTree = "<group>"; };
 		8348FB8615EC86C8005AF833 /* template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = template.rb; sourceTree = "<group>"; };
 		8348FB8815EC960E005AF833 /* coordinate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = coordinate.rb; sourceTree = "<group>"; };
 		8348FB8A15EC9BF3005AF833 /* organism.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = organism.rb; sourceTree = "<group>"; };
 		8348FB8B15EC9BF3005AF833 /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = reproduceable.rb; sourceTree = "<group>"; };
 		8348FB8C15EC9BF3005AF833 /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = world.rb; sourceTree = "<group>"; };
+		8348FB9015EF602E005AF833 /* Plus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plus.json; sourceTree = "<group>"; };
 		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,7 +77,8 @@
 		8348FB8315EC83A4005AF833 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				8348FB8415EC84B2005AF833 /* blinker.json */,
+				8348FB8415EC84B2005AF833 /* Blinker.json */,
+				8348FB9015EF602E005AF833 /* Plus.json */,
 			);
 			name = Templates;
 			path = "Conway's Game of Life";
@@ -232,12 +235,13 @@
 				834F02FF15CB23A800082B8F /* view_controller.rb in Resources */,
 				8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */,
 				8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */,
-				8348FB8515EC84B2005AF833 /* blinker.json in Resources */,
+				8348FB8515EC84B2005AF833 /* Blinker.json in Resources */,
 				8348FB8715EC86C8005AF833 /* template.rb in Resources */,
 				8348FB8915EC960E005AF833 /* coordinate.rb in Resources */,
 				8348FB8D15EC9BF3005AF833 /* organism.rb in Resources */,
 				8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */,
 				8348FB8F15EC9BF3005AF833 /* world.rb in Resources */,
+				8348FB9115EF602E005AF833 /* Plus.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -751,7 +751,7 @@
 							</object>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="62516217">
+					<object class="NSMenuItem" id="678827208">
 						<reference key="NSMenu" ref="649796088"/>
 						<string key="NSTitle">Templates</string>
 						<string key="NSKeyEquiv"/>
@@ -759,14 +759,22 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
-						<object class="NSMenu" key="NSSubmenu" id="678835626">
+						<object class="NSMenu" key="NSSubmenu" id="80810577">
 							<string key="NSTitle">Templates</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMenuItem" id="476026154">
-									<reference key="NSMenu" ref="678835626"/>
+								<object class="NSMenuItem" id="283995734">
+									<reference key="NSMenu" ref="80810577"/>
+									<string key="NSTitle">Plus</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
+								<object class="NSMenuItem" id="1051018653">
+									<reference key="NSMenu" ref="80810577"/>
 									<string key="NSTitle">Blinker</string>
-									<string type="base64-UTF8" key="NSKeyEquiv">Gw</string>
+									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
@@ -1022,6 +1030,7 @@
 							<string key="NSFrame">{{948, 13}, {73, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="109948091">
@@ -1573,9 +1582,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">stencile:</string>
 						<reference key="source" ref="1046872672"/>
-						<reference key="destination" ref="476026154"/>
+						<reference key="destination" ref="1051018653"/>
 					</object>
 					<int key="connectionID">692</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">stencile:</string>
+						<reference key="source" ref="1046872672"/>
+						<reference key="destination" ref="283995734"/>
+					</object>
+					<int key="connectionID">694</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1634,7 +1651,7 @@
 							<reference ref="379814623"/>
 							<reference ref="586577488"/>
 							<reference ref="448692316"/>
-							<reference ref="62516217"/>
+							<reference ref="678827208"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2353,26 +2370,32 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">689</int>
-						<reference key="object" ref="62516217"/>
+						<reference key="object" ref="678827208"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="678835626"/>
+							<reference ref="80810577"/>
 						</object>
 						<reference key="parent" ref="649796088"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">690</int>
-						<reference key="object" ref="678835626"/>
+						<reference key="object" ref="80810577"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="476026154"/>
+							<reference ref="1051018653"/>
+							<reference ref="283995734"/>
 						</object>
-						<reference key="parent" ref="62516217"/>
+						<reference key="parent" ref="678827208"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">691</int>
-						<reference key="object" ref="476026154"/>
-						<reference key="parent" ref="678835626"/>
+						<reference key="object" ref="1051018653"/>
+						<reference key="parent" ref="80810577"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">693</int>
+						<reference key="object" ref="283995734"/>
+						<reference key="parent" ref="80810577"/>
 					</object>
 				</object>
 			</object>
@@ -2481,6 +2504,7 @@
 					<string>689.IBPluginDependency</string>
 					<string>690.IBPluginDependency</string>
 					<string>691.IBPluginDependency</string>
+					<string>693.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
@@ -2609,6 +2633,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -2623,7 +2648,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">692</int>
+			<int key="maxID">694</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2727,11 +2752,15 @@
 							<string>stop_button</string>
 							<string>table</string>
 							<string>tableView</string>
+							<string>template</string>
+							<string>template_selected</string>
 							<string>window</string>
 							<string>world</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2752,6 +2781,8 @@
 							<string>stop_button</string>
 							<string>table</string>
 							<string>tableView</string>
+							<string>template</string>
+							<string>template_selected</string>
 							<string>window</string>
 							<string>world</string>
 						</object>
@@ -2779,6 +2810,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">tableView</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">template</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">template_selected</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
