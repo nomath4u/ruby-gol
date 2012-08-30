@@ -23,6 +23,16 @@
 		8348FB9F15EF6900005AF833 /* Toad.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9E15EF6900005AF833 /* Toad.json */; };
 		8348FBA215EF69DB005AF833 /* Glider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FBA115EF69DB005AF833 /* Glider.json */; };
 		8348FBA415EF6B5D005AF833 /* Pulsar.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FBA315EF6B5D005AF833 /* Pulsar.json */; };
+		8348FBA715F02391005AF833 /* Pulsar.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FBA315EF6B5D005AF833 /* Pulsar.json */; };
+		8348FBA815F02391005AF833 /* Glider.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FBA115EF69DB005AF833 /* Glider.json */; };
+		8348FBA915F02391005AF833 /* Blinker.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB8415EC84B2005AF833 /* Blinker.json */; };
+		8348FBAA15F02391005AF833 /* Toad.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9E15EF6900005AF833 /* Toad.json */; };
+		8348FBAB15F02391005AF833 /* Block.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9315EF6559005AF833 /* Block.json */; };
+		8348FBAC15F02391005AF833 /* Beehive.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9515EF65AA005AF833 /* Beehive.json */; };
+		8348FBAD15F02391005AF833 /* Boat.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9715EF6620005AF833 /* Boat.json */; };
+		8348FBAE15F02391005AF833 /* Ship.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9915EF667F005AF833 /* Ship.json */; };
+		8348FBAF15F02391005AF833 /* Loaf.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9B15EF6707005AF833 /* Loaf.json */; };
+		8348FBB015F02391005AF833 /* Plus.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8348FB9015EF602E005AF833 /* Plus.json */; };
 		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
 		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
 		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
@@ -44,6 +54,28 @@
 			remoteInfo = "Conway's Game of Life";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8348FBA615F022AB005AF833 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				8348FBA715F02391005AF833 /* Pulsar.json in CopyFiles */,
+				8348FBA815F02391005AF833 /* Glider.json in CopyFiles */,
+				8348FBA915F02391005AF833 /* Blinker.json in CopyFiles */,
+				8348FBAA15F02391005AF833 /* Toad.json in CopyFiles */,
+				8348FBAB15F02391005AF833 /* Block.json in CopyFiles */,
+				8348FBAC15F02391005AF833 /* Beehive.json in CopyFiles */,
+				8348FBAD15F02391005AF833 /* Boat.json in CopyFiles */,
+				8348FBAE15F02391005AF833 /* Ship.json in CopyFiles */,
+				8348FBAF15F02391005AF833 /* Loaf.json in CopyFiles */,
+				8348FBB015F02391005AF833 /* Plus.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8348FB8115EAAD66005AF833 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
@@ -241,6 +273,7 @@
 				834F02C715CB141C00082B8F /* Sources */,
 				834F02C815CB141C00082B8F /* Frameworks */,
 				834F02C915CB141C00082B8F /* Resources */,
+				8348FBA615F022AB005AF833 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -372,7 +405,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -394,7 +427,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;

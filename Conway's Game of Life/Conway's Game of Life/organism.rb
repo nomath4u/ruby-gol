@@ -1,5 +1,5 @@
-require '~/Documents/Game_of_Life/Conway\'s Game of Life/Conway\'s Game of Life/reproduceable'
-require '~/Documents/Game_of_Life/Conway\'s Game of Life/Conway\'s Game of Life/world'
+require 'reproduceable'
+require 'world'
 
 class Organism
 	attr_accessor :world,  :x, :y, :full_neighbor_north

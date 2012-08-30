@@ -6,7 +6,7 @@
 #  Copyright 2012 Christopher Harper. All rights reserved.
 #
 
-require '~/Documents/Game_of_Life/Conway\'s Game of Life/Conway\'s Game of Life/coordinate'
+require 'coordinate'
 require 'json'
 
 
@@ -23,7 +23,7 @@ class Template
     def setLocations(locations)
         
         #Get and parse stencile file based on sender
-        json = File.read("/Users/Chris/Documents/Game_Of_Life/Conway\'s Game of Life/Conway\'s Game of Life/#{@sender.title}.json")
+        json = File.read(File.expand_path("../#{sender.title}.json", __FILE__))
         iteration = 0
         info = JSON.parse(json)
         

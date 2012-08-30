@@ -7,7 +7,7 @@
 #
 
 require 'organism'
-require '~/Documents/Game_of_life/Conway\'s Game of Life/Conway\'s Game of Life/world'
+require 'world'
 require 'NSCellWithCoordinates'
 
 class ViewController
