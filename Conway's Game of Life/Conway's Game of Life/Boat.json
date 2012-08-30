@@ -1,0 +1,9 @@
+{
+    "points" : [
+                { "x_coordinate": 0 , "y_coordinate": 0},
+                { "x_coordinate": -1 , "y_coordinate": 1},
+                { "x_coordinate": 1 , "y_coordinate": 1},
+                { "x_coordinate": 0 , "y_coordinate": 2},
+                { "x_coordinate": 1 , "y_coordinate": 2}
+                ]
+}

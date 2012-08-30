@@ -22,11 +22,12 @@ class Template
     
     def setLocations(locations)
         
-        #Blinker
+        #Get and parse stencile file based on sender
         json = File.read("/Users/Chris/Documents/Game_Of_Life/Conway\'s Game of Life/Conway\'s Game of Life/#{@sender.title}.json")
         iteration = 0
         info = JSON.parse(json)
         
+        #Extract organism coordinates
         info.each do |points|
             points[1].each do |coord|
                 locations[iteration] = Coordinate.new(coord['x_coordinate'], coord['y_coordinate'])

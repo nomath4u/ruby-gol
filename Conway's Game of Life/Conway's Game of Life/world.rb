@@ -61,11 +61,11 @@ class World
 		Organism.new(self, x , y, safe)
 	end
     
+    #Spawn Cells in accordance to the template
     def stencile(template, origin_x, origin_y)
         
         template.organism_locations.each do |coordinate|
             spawn_cell((coordinate.x + origin_x), (coordinate.y + origin_y), false)
         end
-       
     end
 end

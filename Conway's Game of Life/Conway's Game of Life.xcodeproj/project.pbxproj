@@ -15,6 +15,14 @@
 		8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8B15EC9BF3005AF833 /* reproduceable.rb */; };
 		8348FB8F15EC9BF3005AF833 /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8C15EC9BF3005AF833 /* world.rb */; };
 		8348FB9115EF602E005AF833 /* Plus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9015EF602E005AF833 /* Plus.json */; };
+		8348FB9415EF6559005AF833 /* Block.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9315EF6559005AF833 /* Block.json */; };
+		8348FB9615EF65AA005AF833 /* Beehive.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9515EF65AA005AF833 /* Beehive.json */; };
+		8348FB9815EF6620005AF833 /* Boat.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9715EF6620005AF833 /* Boat.json */; };
+		8348FB9A15EF667F005AF833 /* Ship.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9915EF667F005AF833 /* Ship.json */; };
+		8348FB9C15EF6707005AF833 /* Loaf.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9B15EF6707005AF833 /* Loaf.json */; };
+		8348FB9F15EF6900005AF833 /* Toad.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB9E15EF6900005AF833 /* Toad.json */; };
+		8348FBA215EF69DB005AF833 /* Glider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FBA115EF69DB005AF833 /* Glider.json */; };
+		8348FBA415EF6B5D005AF833 /* Pulsar.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FBA315EF6B5D005AF833 /* Pulsar.json */; };
 		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
 		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
 		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
@@ -46,6 +54,14 @@
 		8348FB8B15EC9BF3005AF833 /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = reproduceable.rb; sourceTree = "<group>"; };
 		8348FB8C15EC9BF3005AF833 /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = world.rb; sourceTree = "<group>"; };
 		8348FB9015EF602E005AF833 /* Plus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plus.json; sourceTree = "<group>"; };
+		8348FB9315EF6559005AF833 /* Block.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Block.json; sourceTree = "<group>"; };
+		8348FB9515EF65AA005AF833 /* Beehive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Beehive.json; sourceTree = "<group>"; };
+		8348FB9715EF6620005AF833 /* Boat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Boat.json; sourceTree = "<group>"; };
+		8348FB9915EF667F005AF833 /* Ship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ship.json; sourceTree = "<group>"; };
+		8348FB9B15EF6707005AF833 /* Loaf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loaf.json; sourceTree = "<group>"; };
+		8348FB9E15EF6900005AF833 /* Toad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Toad.json; sourceTree = "<group>"; };
+		8348FBA115EF69DB005AF833 /* Glider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Glider.json; sourceTree = "<group>"; };
+		8348FBA315EF6B5D005AF833 /* Pulsar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pulsar.json; sourceTree = "<group>"; };
 		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -77,11 +93,51 @@
 		8348FB8315EC83A4005AF833 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				8348FB8415EC84B2005AF833 /* Blinker.json */,
+				8348FBA515EF6B6A005AF833 /* 3 Period Oscillators */,
+				8348FBA015EF69C1005AF833 /* Spaceships */,
+				8348FB9D15EF68E5005AF833 /* 2 Period Oscillators */,
+				8348FB9215EF6534005AF833 /* Still Lives */,
 				8348FB9015EF602E005AF833 /* Plus.json */,
 			);
 			name = Templates;
 			path = "Conway's Game of Life";
+			sourceTree = "<group>";
+		};
+		8348FB9215EF6534005AF833 /* Still Lives */ = {
+			isa = PBXGroup;
+			children = (
+				8348FB9315EF6559005AF833 /* Block.json */,
+				8348FB9515EF65AA005AF833 /* Beehive.json */,
+				8348FB9715EF6620005AF833 /* Boat.json */,
+				8348FB9915EF667F005AF833 /* Ship.json */,
+				8348FB9B15EF6707005AF833 /* Loaf.json */,
+			);
+			name = "Still Lives";
+			sourceTree = "<group>";
+		};
+		8348FB9D15EF68E5005AF833 /* 2 Period Oscillators */ = {
+			isa = PBXGroup;
+			children = (
+				8348FB8415EC84B2005AF833 /* Blinker.json */,
+				8348FB9E15EF6900005AF833 /* Toad.json */,
+			);
+			name = "2 Period Oscillators";
+			sourceTree = "<group>";
+		};
+		8348FBA015EF69C1005AF833 /* Spaceships */ = {
+			isa = PBXGroup;
+			children = (
+				8348FBA115EF69DB005AF833 /* Glider.json */,
+			);
+			name = Spaceships;
+			sourceTree = "<group>";
+		};
+		8348FBA515EF6B6A005AF833 /* 3 Period Oscillators */ = {
+			isa = PBXGroup;
+			children = (
+				8348FBA315EF6B5D005AF833 /* Pulsar.json */,
+			);
+			name = "3 Period Oscillators";
 			sourceTree = "<group>";
 		};
 		834F02C015CB141C00082B8F = {
@@ -242,6 +298,14 @@
 				8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */,
 				8348FB8F15EC9BF3005AF833 /* world.rb in Resources */,
 				8348FB9115EF602E005AF833 /* Plus.json in Resources */,
+				8348FB9415EF6559005AF833 /* Block.json in Resources */,
+				8348FB9615EF65AA005AF833 /* Beehive.json in Resources */,
+				8348FB9815EF6620005AF833 /* Boat.json in Resources */,
+				8348FB9A15EF667F005AF833 /* Ship.json in Resources */,
+				8348FB9C15EF6707005AF833 /* Loaf.json in Resources */,
+				8348FB9F15EF6900005AF833 /* Toad.json in Resources */,
+				8348FBA215EF69DB005AF833 /* Glider.json in Resources */,
+				8348FBA415EF6B5D005AF833 /* Pulsar.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

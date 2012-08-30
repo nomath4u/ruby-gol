@@ -21,12 +21,14 @@ class ViewController
     attr_accessor :start_button, :stop_button
     attr_accessor :template_selected
     attr_accessor :template
+    attr_accessor :timer_interval
     
     def initialize
         @world = World.new
         @organisms = @world.cells
         @reproduceables = @world.reproduceables
         @template_selected = false
+        @timer_interval = 1.0
         
         
     end
@@ -72,13 +74,14 @@ class ViewController
         
     end
     
+    #Timer for time between ticks
     def startTimer(sender)
         if @timer.nil?
             @start_button.setEnabled false
             @stop_button.setEnabled true
             @time = 0.0
             @timer = NSTimer
-            .scheduledTimerWithTimeInterval(1.0,
+            .scheduledTimerWithTimeInterval(@timer_interval,
                                             target: self,
                                             selector: "tick:",
                                             userInfo: nil,
@@ -98,11 +101,11 @@ class ViewController
     
     def spawn(sender)
         
-        #Regluar function of clicking on a cell
+        #Regluar function of clicking on a cell and spawning a single organism
         if(@template_selected == false)
             Organism.new(@world, sender.clickedColumn, sender.clickedRow, false)
         
-        #If a template has been selected get the origin of the click
+        #If a template has been selected get the origin of the click and create stencile
         else
             @world.stencile(@template, sender.clickedColumn, sender.clickedRow)
             @template_selected = false
@@ -139,12 +142,20 @@ class ViewController
         @organisms = world.cells
         @tableView.reloadData
     end
-    
+ 
+    #Begin Process of spawning an organized group of organisms
     def stencile(sender)
         @template = Template.new(sender)
         @template_selected = true
-        #@world.stencile(template)
-        #@tableView.reloadData
+    end
+    
+    #Take speed selection and make it useable by the timer
+    def menuToSpeed(sender)
+        if(sender.title == "Speed")
+            #Do Nothing
+        else
+            @timer_interval = (1/sender.title.to_i)
+        end
     end
         
 end
