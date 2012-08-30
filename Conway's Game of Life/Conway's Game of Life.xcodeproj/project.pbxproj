@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8348FB7F15EAAA29005AF833 /* AboutViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB7E15EAAA29005AF833 /* AboutViewController.rb */; };
 		8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8115EAAD66005AF833 /* Credits.rtf */; };
+		8348FB8515EC84B2005AF833 /* blinker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8415EC84B2005AF833 /* blinker.json */; };
+		8348FB8715EC86C8005AF833 /* template.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8615EC86C8005AF833 /* template.rb */; };
+		8348FB8915EC960E005AF833 /* coordinate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8815EC960E005AF833 /* coordinate.rb */; };
+		8348FB8D15EC9BF3005AF833 /* organism.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8A15EC9BF3005AF833 /* organism.rb */; };
+		8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8B15EC9BF3005AF833 /* reproduceable.rb */; };
+		8348FB8F15EC9BF3005AF833 /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8348FB8C15EC9BF3005AF833 /* world.rb */; };
 		834F02D015CB141C00082B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02CF15CB141C00082B8F /* Cocoa.framework */; };
 		834F02D215CB141C00082B8F /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834F02D115CB141C00082B8F /* MacRuby.framework */; };
 		834F02DB15CB141C00082B8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 834F02D915CB141C00082B8F /* InfoPlist.strings */; };
@@ -17,11 +22,8 @@
 		834F02E515CB141C00082B8F /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02E415CB141C00082B8F /* rb_main.rb */; };
 		834F02E715CB141C00082B8F /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02E615CB141C00082B8F /* AppDelegate.rb */; };
 		834F02F715CB146400082B8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F215CB146400082B8F /* README.md */; };
-		834F02F815CB146400082B8F /* reproduceable.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F315CB146400082B8F /* reproduceable.rb */; };
-		834F02F915CB146400082B8F /* world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02F415CB146400082B8F /* world.rb */; };
 		834F02FF15CB23A800082B8F /* view_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 834F02FE15CB23A800082B8F /* view_controller.rb */; };
 		8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */; };
-		836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */ = {isa = PBXBuildFile; fileRef = 836F0DBA15CC5A7F003ECB1B /* organism.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8348FB7E15EAAA29005AF833 /* AboutViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AboutViewController.rb; sourceTree = "<group>"; };
 		8348FB8115EAAD66005AF833 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		8348FB8415EC84B2005AF833 /* blinker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blinker.json; sourceTree = "<group>"; };
+		8348FB8615EC86C8005AF833 /* template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = template.rb; sourceTree = "<group>"; };
+		8348FB8815EC960E005AF833 /* coordinate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = coordinate.rb; sourceTree = "<group>"; };
+		8348FB8A15EC9BF3005AF833 /* organism.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = organism.rb; sourceTree = "<group>"; };
+		8348FB8B15EC9BF3005AF833 /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = reproduceable.rb; sourceTree = "<group>"; };
+		8348FB8C15EC9BF3005AF833 /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = world.rb; sourceTree = "<group>"; };
 		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -48,11 +55,8 @@
 		834F02E415CB141C00082B8F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		834F02E615CB141C00082B8F /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		834F02F215CB146400082B8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		834F02F315CB146400082B8F /* reproduceable.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = reproduceable.rb; path = ../../reproduceable.rb; sourceTree = "<group>"; };
-		834F02F415CB146400082B8F /* world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = world.rb; path = ../../world.rb; sourceTree = "<group>"; };
 		834F02FE15CB23A800082B8F /* view_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = view_controller.rb; sourceTree = "<group>"; };
 		8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSCellWithCoordinates.rb; sourceTree = "<group>"; };
-		836F0DBA15CC5A7F003ECB1B /* organism.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = organism.rb; path = ../organism.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8348FB8315EC83A4005AF833 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				8348FB8415EC84B2005AF833 /* blinker.json */,
+			);
+			name = Templates;
+			path = "Conway's Game of Life";
+			sourceTree = "<group>";
+		};
 		834F02C015CB141C00082B8F = {
 			isa = PBXGroup;
 			children = (
-				836F0DBA15CC5A7F003ECB1B /* organism.rb */,
+				8348FB8315EC83A4005AF833 /* Templates */,
 				834F02D615CB141C00082B8F /* Conway's Game of Life */,
 				834F02CE15CB141C00082B8F /* Frameworks */,
 				834F02CC15CB141C00082B8F /* Products */,
@@ -98,9 +111,11 @@
 		834F02D615CB141C00082B8F /* Conway's Game of Life */ = {
 			isa = PBXGroup;
 			children = (
-				8348FB7E15EAAA29005AF833 /* AboutViewController.rb */,
-				834F02F315CB146400082B8F /* reproduceable.rb */,
-				834F02F415CB146400082B8F /* world.rb */,
+				8348FB8815EC960E005AF833 /* coordinate.rb */,
+				8348FB8A15EC9BF3005AF833 /* organism.rb */,
+				8348FB8B15EC9BF3005AF833 /* reproduceable.rb */,
+				8348FB8C15EC9BF3005AF833 /* world.rb */,
+				8348FB8615EC86C8005AF833 /* template.rb */,
 				834F02FE15CB23A800082B8F /* view_controller.rb */,
 				8357C5CC15E864760084D023 /* NSCellWithCoordinates.rb */,
 				834F02E615CB141C00082B8F /* AppDelegate.rb */,
@@ -214,13 +229,15 @@
 				834F02E515CB141C00082B8F /* rb_main.rb in Resources */,
 				834F02E715CB141C00082B8F /* AppDelegate.rb in Resources */,
 				834F02F715CB146400082B8F /* README.md in Resources */,
-				834F02F815CB146400082B8F /* reproduceable.rb in Resources */,
-				834F02F915CB146400082B8F /* world.rb in Resources */,
 				834F02FF15CB23A800082B8F /* view_controller.rb in Resources */,
-				836F0DBB15CC5A7F003ECB1B /* organism.rb in Resources */,
 				8357C5CD15E864760084D023 /* NSCellWithCoordinates.rb in Resources */,
-				8348FB7F15EAAA29005AF833 /* AboutViewController.rb in Resources */,
 				8348FB8215EAAD66005AF833 /* Credits.rtf in Resources */,
+				8348FB8515EC84B2005AF833 /* blinker.json in Resources */,
+				8348FB8715EC86C8005AF833 /* template.rb in Resources */,
+				8348FB8915EC960E005AF833 /* coordinate.rb in Resources */,
+				8348FB8D15EC9BF3005AF833 /* organism.rb in Resources */,
+				8348FB8E15EC9BF3005AF833 /* reproduceable.rb in Resources */,
+				8348FB8F15EC9BF3005AF833 /* world.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

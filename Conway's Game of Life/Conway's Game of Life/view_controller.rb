@@ -7,7 +7,7 @@
 #
 
 require 'organism'
-require '~/Documents/Game_of_life/world'
+require '~/Documents/Game_of_life/Conway\'s Game of Life/Conway\'s Game of Life/world'
 require 'NSCellWithCoordinates'
 
 class ViewController
@@ -19,12 +19,14 @@ class ViewController
     attr_accessor :tableView
     attr_accessor :reproduceables
     attr_accessor :start_button, :stop_button
+    attr_accessor :template_selected
+    attr_accessor :template
     
     def initialize
         @world = World.new
         @organisms = @world.cells
         @reproduceables = @world.reproduceables
-        
+        @template_selected = false
         
         
     end
@@ -96,8 +98,17 @@ class ViewController
     
     def spawn(sender)
         
-        Organism.new(@world, sender.clickedColumn, sender.clickedRow, false)
+        #Regluar function of clicking on a cell
+        if(@template_selected == false)
+            Organism.new(@world, sender.clickedColumn, sender.clickedRow, false)
+        
+        #If a template has been selected get the origin of the click
+        else
+            @world.stencile(@template, sender.clickedColumn, sender.clickedRow)
+            @template_selected = false
+        end
         @tableView.reloadData
+            
     end
     
     
@@ -128,5 +139,12 @@ class ViewController
         @organisms = world.cells
         @tableView.reloadData
     end
-            
+    
+    def stencile(sender)
+        @template = Template.new
+        @template_selected = true
+        #@world.stencile(template)
+        #@tableView.reloadData
+    end
+        
 end

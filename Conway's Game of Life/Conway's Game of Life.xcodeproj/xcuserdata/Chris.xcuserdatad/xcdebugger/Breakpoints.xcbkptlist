@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Conway&apos;s Game of Life/view_controller.rb"
-         timestampString = "367699216.936922"
+         timestampString = "367996710.572791"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
          landmarkName = "class ViewController"
          landmarkType = "3">
       </FileBreakpoint>
