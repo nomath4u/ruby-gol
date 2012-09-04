@@ -28,11 +28,9 @@ class Template
         info = JSON.parse(json)
         
         #Extract organism coordinates
-        info.each do |points|
-            points[1].each do |coord|
-                locations[iteration] = Coordinate.new(coord['x_coordinate'], coord['y_coordinate'])
-                iteration += 1
-            end
+        info['points'].each do |coord|
+            locations[iteration] = Coordinate.new(coord['x_coordinate'], coord['y_coordinate'])
+            iteration += 1
         end
         
         @organism_locations = locations

@@ -1,3 +1,4 @@
+
 class World
 
 	attr_accessor :cells , :reproduceables, :safe_cells
@@ -9,7 +10,8 @@ class World
 	end
 
 	def tick!
-		#Add reproduceables around each cell and set cell neighbor counts for each cell
+        
+        #Add reproduceables around each cell and set cell neighbor counts for each cell
 		@cells.each do |cell|
 			cell.neighbor
 			cell.add_reproduceable			
@@ -55,6 +57,7 @@ class World
             cell.full_neighbor_west = false
             cell.full_neighbor_northwest = false
         end
+        
 	end
 
 	def spawn_cell(x , y, safe)

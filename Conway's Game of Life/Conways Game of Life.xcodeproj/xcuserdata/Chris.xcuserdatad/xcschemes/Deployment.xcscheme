@@ -15,9 +15,23 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "834F02CA15CB141C00082B8F"
-               BuildableName = "Conway&apos;s Game of Life.app"
-               BlueprintName = "Conway&apos;s Game of Life"
-               ReferencedContainer = "container:Conway&apos;s Game of Life.xcodeproj">
+               BuildableName = "Conways Game of Life.app"
+               BlueprintName = "Conways Game of Life"
+               ReferencedContainer = "container:Conways Game of Life.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "834F02D315CB141C00082B8F"
+               BuildableName = "Deployment"
+               BlueprintName = "Deployment"
+               ReferencedContainer = "container:Conways Game of Life.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +43,6 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "834F02CA15CB141C00082B8F"
-            BuildableName = "Conway&apos;s Game of Life.app"
-            BlueprintName = "Conway&apos;s Game of Life"
-            ReferencedContainer = "container:Conway&apos;s Game of Life.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -48,15 +53,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "834F02CA15CB141C00082B8F"
-            BuildableName = "Conway&apos;s Game of Life.app"
-            BlueprintName = "Conway&apos;s Game of Life"
-            ReferencedContainer = "container:Conway&apos;s Game of Life.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -66,15 +62,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "834F02CA15CB141C00082B8F"
-            BuildableName = "Conway&apos;s Game of Life.app"
-            BlueprintName = "Conway&apos;s Game of Life"
-            ReferencedContainer = "container:Conway&apos;s Game of Life.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

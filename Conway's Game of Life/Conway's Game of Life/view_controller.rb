@@ -22,6 +22,7 @@ class ViewController
     attr_accessor :template_selected
     attr_accessor :template
     attr_accessor :timer_interval
+    attr_accessor :time_test
     
     def initialize
         @world = World.new
@@ -29,13 +30,16 @@ class ViewController
         @reproduceables = @world.reproduceables
         @template_selected = false
         @timer_interval = 1.0
+        @time_test = false
+
         
         
     end
     
     def awakeFromNib
+        
         index = 0
-        @numberOfColumns = 52
+        @numberOfColumns = 54
         #Lock Some TableView functions
         @tableView.setAllowsColumnReordering false
         @tableView.setAllowsColumnSelection false
@@ -69,7 +73,11 @@ class ViewController
         end
         
         #Update the Table
+        start_time = Time.now
         @tableView.reloadData
+        end_time = Time.now
+        puts " Tick Elapsed time = #{end_time - start_time}"
+        @time_test = true
         
         
     end
@@ -110,13 +118,16 @@ class ViewController
             @world.stencile(@template, sender.clickedColumn, sender.clickedRow)
             @template_selected = false
         end
+        start_time = Time.now
         @tableView.reloadData
+        end_time = Time.now
+        puts " Spawn Elapsed time = #{end_time - start_time}"
             
     end
     
     
     def numberOfRowsInTableView(sender)
-       43
+       38
     end
     
     def tableView(tableView, objectValueForTableColumn:column, row:row)
@@ -124,11 +135,19 @@ class ViewController
     end
     
     def tableView(tableView, willDisplayCell:cell, forTableColumn:column, row:row)
+        start_time = Time.now
         cell.setDrawsBackground true
         cell.column = column
         cell.row = row
         alive = checkForOrganism(column, row)
         cell.setBackgroundColor(alive ? NSColor.greenColor : NSColor.whiteColor)
+        if(time_test)
+            end_time = Time.now
+            puts "TableView #{end_time - start_time}"
+            @time_test = false
+        end
+            
+
     end
     
     def checkForOrganism(column, row)

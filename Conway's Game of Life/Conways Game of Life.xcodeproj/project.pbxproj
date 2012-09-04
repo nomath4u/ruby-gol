@@ -94,13 +94,13 @@
 		8348FB9E15EF6900005AF833 /* Toad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Toad.json; sourceTree = "<group>"; };
 		8348FBA115EF69DB005AF833 /* Glider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Glider.json; sourceTree = "<group>"; };
 		8348FBA315EF6B5D005AF833 /* Pulsar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pulsar.json; sourceTree = "<group>"; };
-		834F02CB15CB141C00082B8F /* Conway's Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conway's Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		834F02CB15CB141C00082B8F /* Conways Game of Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conways Game of Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834F02CF15CB141C00082B8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		834F02D115CB141C00082B8F /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		834F02D815CB141C00082B8F /* Conway's Game of Life-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Conway's Game of Life-Info.plist"; sourceTree = "<group>"; };
+		834F02D815CB141C00082B8F /* Conways Game of Life-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Conways Game of Life-Info.plist"; sourceTree = "<group>"; };
 		834F02DA15CB141C00082B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		834F02DC15CB141C00082B8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		834F02DE15CB141C00082B8F /* Conway's Game of Life-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conway's Game of Life-Prefix.pch"; sourceTree = "<group>"; };
+		834F02DE15CB141C00082B8F /* Conways Game of Life-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Conways Game of Life-Prefix.pch"; sourceTree = "<group>"; };
 		834F02E115CB141C00082B8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		834F02E415CB141C00082B8F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		834F02E615CB141C00082B8F /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		834F02CC15CB141C00082B8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				834F02CB15CB141C00082B8F /* Conway's Game of Life.app */,
+				834F02CB15CB141C00082B8F /* Conways Game of Life.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,10 +220,10 @@
 		834F02D715CB141C00082B8F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				834F02D815CB141C00082B8F /* Conway's Game of Life-Info.plist */,
+				834F02D815CB141C00082B8F /* Conways Game of Life-Info.plist */,
 				834F02D915CB141C00082B8F /* InfoPlist.strings */,
 				834F02DC15CB141C00082B8F /* main.m */,
-				834F02DE15CB141C00082B8F /* Conway's Game of Life-Prefix.pch */,
+				834F02DE15CB141C00082B8F /* Conways Game of Life-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,6 +256,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 				834F02D515CB141C00082B8F /* PBXTargetDependency */,
 			);
@@ -266,9 +267,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		834F02CA15CB141C00082B8F /* Conway's Game of Life */ = {
+		834F02CA15CB141C00082B8F /* Conways Game of Life */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conway's Game of Life" */;
+			buildConfigurationList = 834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conways Game of Life" */;
 			buildPhases = (
 				834F02C715CB141C00082B8F /* Sources */,
 				834F02C815CB141C00082B8F /* Frameworks */,
@@ -279,9 +280,9 @@
 			);
 			dependencies = (
 			);
-			name = "Conway's Game of Life";
+			name = "Conways Game of Life";
 			productName = "Conway's Game of Life";
-			productReference = 834F02CB15CB141C00082B8F /* Conway's Game of Life.app */;
+			productReference = 834F02CB15CB141C00082B8F /* Conways Game of Life.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +294,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Christopher Harper";
 			};
-			buildConfigurationList = 834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conway's Game of Life" */;
+			buildConfigurationList = 834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conways Game of Life" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -305,7 +306,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				834F02CA15CB141C00082B8F /* Conway's Game of Life */,
+				834F02CA15CB141C00082B8F /* Conways Game of Life */,
 				834F02D315CB141C00082B8F /* Deployment */,
 			);
 		};
@@ -358,7 +359,7 @@
 /* Begin PBXTargetDependency section */
 		834F02D515CB141C00082B8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 834F02CA15CB141C00082B8F /* Conway's Game of Life */;
+			target = 834F02CA15CB141C00082B8F /* Conways Game of Life */;
 			targetProxy = 834F02D415CB141C00082B8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -408,6 +409,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -429,6 +431,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -442,9 +445,9 @@
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Conway's Game of Life/Conway's Game of Life-Prefix.pch";
-				INFOPLIST_FILE = "Conway's Game of Life/Conway's Game of Life-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Conway's Game of Life/Conways Game of Life-Prefix.pch";
+				INFOPLIST_FILE = "Conway's Game of Life/Conways Game of Life-Info.plist";
+				PRODUCT_NAME = "Conways Game of Life";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,9 +462,9 @@
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Conway's Game of Life/Conway's Game of Life-Prefix.pch";
-				INFOPLIST_FILE = "Conway's Game of Life/Conway's Game of Life-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Conway's Game of Life/Conways Game of Life-Prefix.pch";
+				INFOPLIST_FILE = "Conway's Game of Life/Conways Game of Life-Info.plist";
+				PRODUCT_NAME = "Conways Game of Life";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -481,7 +484,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conway's Game of Life" */ = {
+		834F02C515CB141C00082B8F /* Build configuration list for PBXProject "Conways Game of Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				834F02E815CB141C00082B8F /* Debug */,
@@ -490,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conway's Game of Life" */ = {
+		834F02EA15CB141C00082B8F /* Build configuration list for PBXNativeTarget "Conways Game of Life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				834F02EB15CB141C00082B8F /* Debug */,
