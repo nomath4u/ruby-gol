@@ -127,7 +127,7 @@ class ViewController
     
     
     def numberOfRowsInTableView(sender)
-       38
+       33
     end
     
     def tableView(tableView, objectValueForTableColumn:column, row:row)

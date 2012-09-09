@@ -10,30 +10,36 @@ require 'coordinate'
 require 'json'
 
 
+
 class Template
-    attr_accessor :organism_locations
-    attr_accessor :sender
-    def initialize(sender)
-        @sender = sender
-        locations = []
-        setLocations(locations)
-        
+  
+  attr_accessor :organism_locations
+  attr_accessor :sender
+  def initialize(sender)
+    @sender = sender
+    locations = []
+    setLocations(locations)
+    
+  end
+  
+  def setLocations(locations)
+    
+    #Get and parse stencile file based on sender
+    
+    #Using $0 because __FILE__ gets compiled incorrectly in macruby
+    temp = File.expand_path("../#{sender.title}.json", $0)
+    
+    contents = File.read(temp)
+    iteration = 0
+    info = JSON.parse(contents)
+    
+    #Extract organism coordinates
+    info['points'].each do |coord|
+      locations[iteration] = Coordinate.new(coord['x_coordinate'], coord['y_coordinate'])
+      iteration += 1
     end
     
-    def setLocations(locations)
-        
-        #Get and parse stencile file based on sender
-        json = File.read(File.expand_path("../#{sender.title}.json", __FILE__))
-        iteration = 0
-        info = JSON.parse(json)
-        
-        #Extract organism coordinates
-        info['points'].each do |coord|
-            locations[iteration] = Coordinate.new(coord['x_coordinate'], coord['y_coordinate'])
-            iteration += 1
-        end
-        
-        @organism_locations = locations
-    end
+    @organism_locations = locations
+  end
 end
 
